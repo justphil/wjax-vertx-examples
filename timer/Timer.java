@@ -13,8 +13,9 @@ public class Timer extends Verticle {
 		     
 		    public void handle(Long timerID) {  
 		        logger.info("In event handler " + count + " " + System.nanoTime() + "\n"); 
-		        if (++count == 10) {
+		        if (++count == 20) {
 		            vertx.cancelTimer(timerID);
+		            container.exit();
 		        }          
 		    }
 		});
