@@ -15,7 +15,7 @@ public class HelloServer extends Verticle {
       	logger.info(Thread.currentThread().getId());
       	
         req.response().headers().set("Content-Type", "text/plain");
-        req.response().end("Hello World\n");
+        req.response().end("Hello WJAX 2013\n");
       }
     }).listen(8080);
   }
